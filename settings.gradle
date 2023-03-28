@@ -1,3 +1,16 @@
+// Fabric needs this...
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = 'MinecraftAuthentication-Plugin'
 
-include 'common', 'bukkit', 'sponge', 'forge:1.16.5', 'forge:1.18.2', 'forge:1.19.3'
+include 'common', 'bukkit', 'sponge', 'forge', 'forge:1.16.5', 'forge:1.18.2', 'forge:1.19.3', 'fabric', 'fabric:1.18.2'
+

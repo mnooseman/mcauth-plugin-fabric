@@ -4,8 +4,6 @@ plugins {
     id 'org.cadixdev.licenser' version '0.6.1'
 }
 
-version = '1.0-SNAPSHOT'
-
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 
 subprojects {
@@ -13,6 +11,9 @@ subprojects {
     apply plugin: 'io.freefair.lombok'
     apply plugin: 'com.github.johnrengelman.shadow'
     apply plugin: 'org.cadixdev.licenser'
+
+    group = 'me.minecraftauth'
+    version = '1.0-SNAPSHOT'
 
     java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
@@ -22,6 +23,9 @@ subprojects {
         mavenCentral()
         maven {
             url 'https://nexus.scarsz.me/content/groups/public/'
+        }
+        maven {
+            url 'https://libraries.minecraft.net/'
         }
     }
 
